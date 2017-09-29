@@ -1,0 +1,33 @@
+<html>
+    <input type="textbox" id=txtnum>
+    <input type="button" value="check" id=btnchk>
+    <script>
+        var c=0;
+      const prime= (n)=>  { 
+        if(n>1)
+        {
+            for(let i=2;i<=n/2;++i)
+            {
+             if(n%i==0)
+                c=1;
+            }
+            if (c==1)
+             {
+             c=0;
+             console.log("Composite");
+             }
+         else
+            console.log("prime");
+        }
+            else if(n==1)
+                console.log("Neither prime nor composite")
+             else
+                
+                console.log("Not Defined")
+                
+      }
+
+            document.getElementById("btnchk").addEventListener("click",function(){var number=document.getElementById("txtnum").value;
+            prime(number)});
+    </script>
+</html>
